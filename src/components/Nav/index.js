@@ -1,12 +1,14 @@
 import React from "react";
 
 function Nav(props){
+  //props that brings in categories, setCategory, and currentCategory 
   const {
     categories = [],
     setCurrentCategory,
     currentCategory
   } = props;
 
+  //creates button from different categories
   return (
     <header className="flex-row px-1">
       <h1>

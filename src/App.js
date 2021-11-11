@@ -9,6 +9,7 @@ import './App.css';
 
 
 function App() {
+  //set up categories
   const [categories] = useState([
     {
       name: "About Me",
@@ -28,6 +29,7 @@ function App() {
     }
   ]);
 
+  //hooks to set the category
   const [currentCategory, setCurrentCategory] = useState(categories[0])
   return (
   <>

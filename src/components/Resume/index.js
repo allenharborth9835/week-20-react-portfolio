@@ -1,6 +1,7 @@
 import React from "react";
 
 function Resume(){
+  //reurns resume
   return (
     <section className="career-info">
       <article id="education">
@@ -13,6 +14,7 @@ function Resume(){
         <p>Learn Industrial Automation Cert.- Aug. 2017</p>
         <p>Programing foundations: Fundamentals Cert.- Apr. 2018</p>
         <p>Programming Foundations: objective-oriented Design Cert.- Mar 2018</p>
+        <a href="../../assets/pdf/Allen_Harborth-resume.pdf" download>Download Resume</a>
       </article>
       <article id="work-history">
         <h4>Work History</h4>

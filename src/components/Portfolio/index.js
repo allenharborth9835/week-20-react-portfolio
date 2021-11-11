@@ -1,4 +1,6 @@
 import React from "react";
+
+//returns resume with links to repo and demo
 function Resume(){
   return (
     <section class="projects">

@@ -1,5 +1,6 @@
 import React from "react";
 
+//component to return about section
 function About(){
   return (
     <section className="bio-info">

@@ -179,6 +179,16 @@ header a:hover{
 #education p{
   color:var(--tertiary);
 }
+#education a{
+  color: var(--tertiary);
+  background-color: var(--darker);
+  border: none;
+}
+#education a:hover{
+  text-decoration: none;
+  opacity: .8;
+}
+
 /*style for the work history section*/
 #work-history{
   width:60%;
@@ -275,7 +285,7 @@ header a:hover{
   height: 198px;
 }
 .contact-me button{
-  color: white;
+  color: var(--tertiary);
   background-color: var(--third);
   border: none;
   border-radius: 45%;
@@ -504,6 +514,10 @@ footer{
   padding: 10px 0px 50px 0px;
   text-align:center;
   height: 50px;
+}
+footer a{
+  color: aliceblue;
+  font-size: 1.1rem;
 }
 footer  h2{
   color: aliceblue;

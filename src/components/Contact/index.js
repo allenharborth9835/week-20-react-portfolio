@@ -2,11 +2,15 @@ import React, {useState} from "react";
 import {validateEmail} from '../../utils/validateEmail.js'
 
 function Contact(){
+  //hook to create state for the form
   const[formState, setFormState] = useState({name:'', email:'', message:''})
+  //create the inputs from the state
   const { name, email, message } = formState;
+  //hook for the error message
   const [errorMessage, setErrorMessage] = useState('');
   
 
+  //function to handle the submit action
   function handleSubmit(e){
     e.preventDefault();
     if(!errorMessage){
@@ -14,8 +18,10 @@ function Contact(){
     }
   }
 
+  //function to handle a change in the form
   function handleChange(e){
     if (e.target.name === 'email') {
+      //validates email
       const isValid = validateEmail(e.target.value);
       // isValid conditional statement
       if(!isValid){
@@ -25,6 +31,7 @@ function Contact(){
         setFormState({...formState, [e.target.name]: e.target.value })
       }  
     }else{
+      //if nothing is inputed throw error
       if(!e.target.value.length){
         console.log(e.target.name)
         setErrorMessage(`${e.target.name} is required.`);
