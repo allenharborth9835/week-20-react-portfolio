@@ -6,9 +6,8 @@ main {
 :root {
   --primary: #403d39;
   --secondary: #d62828;
-  --third: #012a42;
+  --third: #01324e;
   --tertiary: #dde5b6;
-  --light: #f77f00;
   --dark: #000000;
   --darker: #111111;
   --error: rgb(228, 46, 1);
@@ -24,7 +23,7 @@ main {
 
 html,
 body {
-  min-height: 100%;
+  min-height: calc(99vh - 49px);
 }
 
 body {
@@ -92,7 +91,7 @@ a:hover {
 
 header {
   padding-top:10px;
-  padding-bottom: 7px;
+  padding-bottom: 5px;
   background-image: url("./assets/square-halftone-pattern_1409-1064.jpg");
 }
 
@@ -136,7 +135,9 @@ header a:hover{
   box-shadow: 0 0 10px rgba(0,0,0, 0.5);
   margin: 20px;
 }
-
+.React{
+  color:var(--secondary)
+}
 
 .skills{
   background-color:var(--darker) ;
@@ -161,8 +162,8 @@ header a:hover{
 #education{
   width:30%;
   border-radius: 15px;
-  padding:15px;
-  margin: 20px;
+  padding:5px;
+  margin: 10px;
   background-color: var(--third);
   box-shadow: 0 0 10px rgba(0,0,0, 0.5);
 }
@@ -170,7 +171,7 @@ header a:hover{
   color:var(--primary);
   font-size: 35px;
   border-bottom: 5px solid var(--dark);
-  border-width: 20%;
+  border-width: 10%;
 }
 #education h3{
   color: var(--darker);
@@ -182,8 +183,8 @@ header a:hover{
 #work-history{
   width:60%;
   border-radius: 15px;
-  padding:10px;
-  margin: 20px;
+  padding:5px;
+  margin: 8px;
   background-color: var(--darker);
   box-shadow: 0 0 10px rgba(0,0,0, 0.5);
 }
@@ -271,7 +272,7 @@ header a:hover{
 }
 .contact-me textarea{
   width: 23vw;
-  height:290px;
+  height: 198px;
 }
 .contact-me button{
   color: white;
@@ -281,6 +282,46 @@ header a:hover{
 }
 .contact-me label{
   color: #403d39;
+}
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width:100%;
+  width:0 auto;
+  margin: 10px 0 10px 10px;
+}
+.proj{
+  border-radius: 15px;
+  background-color: var(--dark);
+  margin:10px;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+  color: var(--tertiary);
+
+}
+.proj img{
+  border-radius: 15px;
+  width: 100%;
+}
+.proj a{
+  color: var(--primary)
+}
+.proj a:hover{
+  color: var(--darker);
+  text-decoration: none;
+}
+.proj h2, .proj h3, .proj p{
+  margin:0 20px 20px 20px;
+}
+.whiteText{
+  color:var(--tertiary)
+}
+.primary{
+
+  width: 97%;
+}
+.secondary{
+  width: 48%;
 }
 
 button:hover {
@@ -453,4 +494,17 @@ a {
 
 .navActive {
   color: var(--third);
+}
+
+/*style for the footer*/
+footer{
+  width: 100%;
+  height:60px;
+  background-color: black;
+  padding: 10px 0px 50px 0px;
+  text-align:center;
+  height: 50px;
+}
+footer  h2{
+  color: aliceblue;
 }

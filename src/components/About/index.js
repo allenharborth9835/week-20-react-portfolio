@@ -19,7 +19,7 @@ function About(){
         <h2>Skills and details</h2>
         <p>College in computer science.</p>
         <p>Positions of leadership and communication in small groups.</p>
-        <p>Use of java, javascript. python, SQL, and C.</p>
+        <p>Use of java, HTML, CSS, javascript, NODE.js python, SQL, mongoDB(NoSQL), React, and C.</p>
         <p>Attention to detail.</p>
         <p>Ability to follow orders.</p>
         <p>Able to work with a diverse team and perform task in a respectful and responsible way.</p>

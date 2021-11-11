@@ -4,6 +4,7 @@ import About from './components/About'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Resume from './components/Resume'
+import Footer from './components/Footer'
 import './App.css';
 
 
@@ -29,7 +30,8 @@ function App() {
 
   const [currentCategory, setCurrentCategory] = useState(categories[0])
   return (
-    <div className="App">
+  <>
+    <body className="App">
       <Nav
         categories={categories}
         setCurrentCategory={setCurrentCategory}
@@ -42,8 +44,13 @@ function App() {
           currentCategory.index===3 ? <Contact/>:
           <Resume/>
         }
+        
       </main>
-    </div>
+    </body>
+    <footer>
+      <Footer/>
+    </footer>
+  </>
   );
 }
 

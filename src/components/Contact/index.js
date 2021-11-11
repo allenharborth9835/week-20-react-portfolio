@@ -1,6 +1,40 @@
-import React from "react";
+import React, {useState} from "react";
+import {validateEmail} from '../../utils/validateEmail.js'
 
 function Contact(){
+  const[formState, setFormState] = useState({name:'', email:'', message:''})
+  const { name, email, message } = formState;
+  const [errorMessage, setErrorMessage] = useState('');
+  
+
+  function handleSubmit(e){
+    e.preventDefault();
+    if(!errorMessage){
+      console.log(formState)
+    }
+  }
+
+  function handleChange(e){
+    if (e.target.name === 'email') {
+      const isValid = validateEmail(e.target.value);
+      // isValid conditional statement
+      if(!isValid){
+        setErrorMessage('Your email is invalid.');
+      }else{
+        setErrorMessage('');
+        setFormState({...formState, [e.target.name]: e.target.value })
+      }  
+    }else{
+      if(!e.target.value.length){
+        console.log(e.target.name)
+        setErrorMessage(`${e.target.name} is required.`);
+      } else {
+        setErrorMessage('');
+        setFormState({...formState, [e.target.name]: e.target.value })
+      }
+    }
+  }
+
   return (
     <section className="contact-cont">
             <article className="contact-info">
@@ -40,17 +74,26 @@ function Contact(){
             </article>
             <article className="contact-me">
                 <h2>Contact Me</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="name">your name/business</label>
-                    <input type="text" id="name" placeholder="e.g. Bill Gates (CEO at Windows)"/>
+                    <input type="text" name="name" defaultValue={name} onBlur={handleChange}/>
+                    <br/>
+                    <label htmlFor="email">your email</label>
+                    <br/>
+                    <input type="email" name="email" defaultValue={email} onBlur={handleChange}/>
                     <br/>
                     <label htmlFor="message">Message</label>
-                    <textarea id="message" placeholder="Your message"></textarea>
+                    <textarea name="message" defaultValue={message} onBlur={handleChange}/>
                     <button type="Submit">Submit</button>
+                    {errorMessage &&(
+                      <div>
+                        <p className="whiteText">{errorMessage}</p>
+                      </div>
+                    )}
                 </form>
             </article>
         </section>
   );
 }
 
-export default Contact
+export default Contact;
