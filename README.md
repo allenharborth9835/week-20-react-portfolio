@@ -1,9 +1,12 @@
-# week-19-PWA-budget-tracker
+# week-20-react-portfolio
 <img src="https://img.shields.io/badge/license-Unlicensed-blue" alt="Unlicensed">   
 
 ## Description
 
+I this project we had to create a react app that is a single page portfolio. In the app will an about me section, a contact section, a protfolio section, and a resume section. I first started the project by giving the npm command "npx create-react-app" to create the initial set up of the app its self I then created the css to contain the colors and styl of the website with in the app.css file. I then set up the app.js which will contain all of the initial jsx of the of the web app and contain the structure of the of the webapp. After importing react and all of the components I then create the function app and set up the different sections as categories and create an index for them, before the final return I create a hook for the current category and set i to about me. In the return statement I set up the Nav component and give it categories and the hook methods as props. In the main section I create an Iternary that will return the right section. The last thing I have returned is the footer. In the navigation component I bring in the props and create the header and the seperate categories for chosing the sections in the return statement. I then create the about me component which contains an image of me, a short introduction, and my skill set. I next created the contact me component. I first make a hook for the form component and make the different components of the form from the hook. I then create a hook for the error message. I then create the functions for the submit and change for the form that will take in a name, email, and message. the I return the jsx that will give my email github and linkedIn and the form itself. I then created the portfolio which goes through all of the projects I have created and gits the demo and the repo of project. I then created the resume component that gives my education and work history as well as a link to a pdf of my resume. The final component I created was the footer component which is simply a header that contains the links to my github, linkedIn, and Facebook.
 
+heroku link -  https://allen-harborth-resume-74869.herokuapp.com/
+![App Screenshot](/src/assets/proj-pic.png)
 ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -12,7 +15,6 @@
 
 ## Installation  
 
-mongoDB must be installed in order for this app to work. follow directions from https://docs.mongodb.com/manual/installation/.
 Node must be installed please go to https://nodejs.org/en/ to install node.
 After node is installed simply type “npm Install” to install all of the necessary packages needed for this project.
 
